@@ -10,5 +10,8 @@ generate sentences from text with markov models + text
 - index.js can be modified however you like.
 
 # Example
-input: think
-output: Whereas if you take it seriously you act it out and that wasn't death anxiety that was death that's a good thing because there is unemployment and conservatives
+#### input 
+```think```
+
+#### output
+```Whereas if you take it seriously you act it out and that wasn't death anxiety that was death that's a good thing because there is unemployment and conservatives```
