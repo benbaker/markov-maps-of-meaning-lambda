@@ -11,7 +11,10 @@ generate sentences from text with markov models + text
 
 # Example
 #### input 
-```think```
+
+think
 
 #### output
-```Whereas if you take it seriously you act it out and that wasn't death anxiety that was death that's a good thing because there is unemployment and conservatives```
+
+Whereas if you take it seriously you act it out and that wasn't death anxiety that was death that's a good thing because there is unemployment and conservatives
+
