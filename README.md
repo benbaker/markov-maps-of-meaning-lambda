@@ -1,15 +1,15 @@
 # markov-maps-of-meaning-lambda
 generate sentences from text with markov models + text
 
-# Install as lambda with serverless
+## Install as lambda with serverless
 - configure config.js and serverless.yml
 - configure AWS environment credentials
 - sls deploy
 
-# Just run locally
+## Just run locally
 - index.js can be modified however you like.
 
-# Example
+## Example
 #### input 
 
 think
