@@ -1,0 +1,36 @@
+
+custom: ${file(config.js):${env:ENV}}
+service: ${self:custom.space}-${self:custom.subspace}-jp
+frameworkVersion: ">=1.4.0 <2.0.0"
+provider:
+  name: 'aws'
+  runtime: ${self:custom.provider.runtime}
+  stage: ${self:custom.provider.stage}
+  region: ${self:custom.provider.region}
+  deploymentBucket: ${self:custom.provider.deploymentBucket}
+  role: ${self:custom.provider.role}
+  environment:
+    DEBUG: error
+plugins:
+  - serverless-plugin-optimize
+package:
+  individually: false
+  include: 
+    - mapsofmeaning.txt
+  exclude:
+    - .gitignore
+    - package.json
+    - .git/**
+functions:
+  api:
+    handler: index.handler
+    memorySize: 128
+    timeout: 99
+    optimize:
+      global: true
+      plugins: ["remove-comments"]
+    role: ${self:custom.provider.role}
+    events:
+      - http:
+          path: mapsofmeaning
+          method: get
